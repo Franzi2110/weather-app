@@ -20,6 +20,7 @@ h1 {
   text-transform: capitalize;
 }
 #github-link {
+  display: block;
   text-align: center;
   color: black;
   font-size: 14px;
