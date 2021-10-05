@@ -28,8 +28,8 @@ function showCityAndTemperature(event) {
   let shownCity = document.querySelector("#city-name");
   shownCity.innerHTML = currentCity.value;
   let units = "metric";
-  apiKey = "b400ae3b711a616262d18b0ca2cbe78f";
-  apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${currentCity.value}&appid=${apiKey}&units=${units}`;
+  let apiKey = "b400ae3b711a616262d18b0ca2cbe78f";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${currentCity.value}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(showTemperature);
   axios.get(apiUrl).then(showDescription);
   axios.get(apiUrl).then(showHumidity);
