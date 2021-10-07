@@ -24,7 +24,7 @@
     <h1>Get your latest weather forecast 🐸</h1>
     <div class="container">
       <div class="row">
-        <div class="col-4">
+        <div class="col-8">
           <form id="weather-search">
             <input
               type="text"
@@ -35,13 +35,13 @@
             <input type="submit" value="Search" />
           </form>
         </div>
-        <div class="col-3">
+        <div class="col-4">
           <button>Use my current location</button>
         </div>
       </div>
       <br />
       <div class="row justify-content-between">
-        <div class="col-3">
+        <div class="col-4">
           <p id="city-name"></p>
           <span id="actualDegree"></span>
           <sup
@@ -49,12 +49,14 @@
           >
           <p id="current-date"></p>
         </div>
-        <div class="col-3" id="more information">
-          <p id="description"></p>
-          <p id="current-humidity"></p>
-          <p id="wind"></p>
+        <div class="col-4" id="more information">
+          <ul>
+            <li id="description"></li>
+            <li id="current-humidity"></li>
+            <li id="wind"></li>
+          </ul>
         </div>
-        <div class="col-3">hint, e.g. Don't forget your sun glasses</div>
+        <div class="col-4">hint, e.g. Don't forget your sun glasses</div>
       </div>
       <br />
       <div class="row justify-content-between">
@@ -80,10 +82,15 @@
         </div>
       </div>
       <div class="row"></div>
+      <small
+        ><a
+          href="https://github.com/Franzi2110/weather-app"
+          id="github-link"
+          target="_blank"
+          >See my projects at GitHub</a
+        ></small
+      >
     </div>
-    <a href="https://github.com/Franzi2110/weather-app" id="github-link"
-      >See my projects at GitHub</a
-    >
     <script src="src/index.js"></script>
   </body>
 </html>
