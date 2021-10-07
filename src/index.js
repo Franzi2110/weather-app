@@ -1,20 +1,24 @@
-let today = new Date();
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
-let day = days[today.getDay()];
-let hour = today.getHours();
-let minutes = today.getUTCMinutes();
-
-function formatDate() {
+function formatDate(timestamp) {
+  let today = new Date(timestamp);
+  let hour = today.getHours();
+  if (hour < 10) {
+    hour = `0${hour}`;
+  }
+  let minutes = today.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[today.getDay()];
   let currentDate = document.querySelector("#current-date");
-  console.log(currentDate);
   currentDate.innerHTML = `${day}, ${hour}:${minutes}`;
 }
 formatDate(today);
