@@ -1,5 +1,5 @@
 function formatDate(timestamp) {
-  let today = new Date(timestamp);
+  let today = new Date(timestamp * 1000);
   let hour = today.getHours();
   if (hour < 10) {
     hour = `0${hour}`;
@@ -21,7 +21,6 @@ function formatDate(timestamp) {
   let currentDate = document.querySelector("#current-date");
   currentDate.innerHTML = `${day}, ${hour}:${minutes}`;
 }
-formatDate(today);
 
 let citySearch = document.querySelector("#weather-search");
 citySearch.addEventListener("submit", searchCityAndTemperature);
