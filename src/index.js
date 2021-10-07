@@ -20,9 +20,9 @@ function formatDate() {
 formatDate(today);
 
 let citySearch = document.querySelector("#weather-search");
-citySearch.addEventListener("submit", showCityAndTemperature);
+citySearch.addEventListener("submit", searchCityAndTemperature);
 
-function showCityAndTemperature(event) {
+function searchCityAndTemperature(event) {
   event.preventDefault();
   let currentCity = document.querySelector("#current-city");
   let shownCity = document.querySelector("#city-name");
