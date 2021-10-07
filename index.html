@@ -24,64 +24,67 @@
     <h1>Get your latest weather forecast 🐸</h1>
     <div class="container">
       <div class="row">
-        <div class="col-8">
-          <form id="weather-search">
-            <input
-              type="text"
-              placeholder="Enter your current city"
-              id="current-city"
-              autocomplete="off"
-            />
-            <input type="submit" value="Search" />
-          </form>
+        <div class="weather-app">
+          <div class="col-8">
+            <form id="weather-search">
+              <input
+                type="text"
+                placeholder="Enter your current city"
+                id="current-city"
+                autocomplete="off"
+              />
+              <input type="submit" value="Search" />
+            </form>
+          </div>
+          <div class="col-4">
+            <button>Use my current location</button>
+          </div>
         </div>
-        <div class="col-4">
-          <button>Use my current location</button>
+        <br />
+        <div class="row justify-content-between">
+          <div class="col-4">
+            <p id="city-name"></p>
+            <span id="actualDegree"></span>
+            <sup
+              ><span id="celsius">°C</span> |
+              <span id="fahrenheit">°F</span></sup
+            >
+            <p id="current-date"></p>
+          </div>
+          <div class="col-4" id="more information">
+            <ul>
+              <li id="description"></li>
+              <li id="current-humidity"></li>
+              <li id="wind"></li>
+            </ul>
+          </div>
+          <div class="col-4">hint, e.g. Don't forget your sun glasses</div>
         </div>
+        <br />
+        <div class="row justify-content-between">
+          <div class="col-2">
+            Day 1
+            <p>☀</p>
+          </div>
+          <div class="col-2">
+            Day 2
+            <p>⛅</p>
+          </div>
+          <div class="col-2">
+            Day 3
+            <p>🌩</p>
+          </div>
+          <div class="col-2">
+            Day 4
+            <p>🌧</p>
+          </div>
+          <div class="col-2">
+            Day 5
+            <p>🌤</p>
+          </div>
+        </div>
+        <div class="row"></div>
       </div>
-      <br />
-      <div class="row justify-content-between">
-        <div class="col-4">
-          <p id="city-name"></p>
-          <span id="actualDegree"></span>
-          <sup
-            ><span id="celsius">°C</span> | <span id="fahrenheit">°F</span></sup
-          >
-          <p id="current-date"></p>
-        </div>
-        <div class="col-4" id="more information">
-          <ul>
-            <li id="description"></li>
-            <li id="current-humidity"></li>
-            <li id="wind"></li>
-          </ul>
-        </div>
-        <div class="col-4">hint, e.g. Don't forget your sun glasses</div>
-      </div>
-      <br />
-      <div class="row justify-content-between">
-        <div class="col-2">
-          Day 1
-          <p>☀</p>
-        </div>
-        <div class="col-2">
-          Day 2
-          <p>⛅</p>
-        </div>
-        <div class="col-2">
-          Day 3
-          <p>🌩</p>
-        </div>
-        <div class="col-2">
-          Day 4
-          <p>🌧</p>
-        </div>
-        <div class="col-2">
-          Day 5
-          <p>🌤</p>
-        </div>
-      </div>
-      <div class="row"></div>
       <small
         ><a
           href="https://github.com/Franzi2110/weather-app"

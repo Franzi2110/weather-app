@@ -37,7 +37,7 @@ ul {
   color: rgb(3, 3, 88);
   cursor: pointer;
 }
-.container {
+.weather-app {
   margin: 20px 50px;
   padding: 30px 20px;
   border: 1px solid rgb(82, 4, 74);
