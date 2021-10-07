@@ -30,27 +30,17 @@ function showCityAndTemperature(event) {
   let units = "metric";
   let apiKey = "b400ae3b711a616262d18b0ca2cbe78f";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${currentCity.value}&appid=${apiKey}&units=${units}`;
-  axios.get(apiUrl).then(showTemperature);
-  axios.get(apiUrl).then(showDescription);
-  axios.get(apiUrl).then(showHumidity);
-  axios.get(apiUrl).then(showWind);
+  axios.get(apiUrl).then(showDetails);
 }
-function showTemperature(response) {
+function showDetails(response) {
   let temperature = document.querySelector("#actualDegree");
   temperature.innerHTML = Math.round(response.data.main.temp);
-}
-function showDescription(response) {
   let description = document.querySelector("#description");
   description.innerHTML = `Description: ${response.data.weather[0].description}`;
-}
-function showHumidity(response) {
   let cityHumidity = document.querySelector("#current-humidity");
   cityHumidity.innerHTML = `Humidity: ${response.data.main.humidity}%`;
-}
-function showWind(response) {
   let wind = document.querySelector("#wind");
   wind.innerHTML = `Wind speed: ${response.data.wind.speed} km/h`;
-  console.log(response);
 }
 function showCityName(response) {
   let cityName = document.querySelector("#city-name");
@@ -58,19 +48,16 @@ function showCityName(response) {
 }
 function currentDetails(event) {
   event.preventDefault();
-  navigator.geolocation.getCurrentPosition(showDetails);
+  navigator.geolocation.getCurrentPosition(showDetailsCurrentPosition);
 }
 
-function showDetails(position) {
+function showDetailsCurrentPosition(position) {
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
   let units = "metric";
   let apiKey = "b400ae3b711a616262d18b0ca2cbe78f";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${units}`;
-  axios.get(apiUrl).then(showTemperature);
-  axios.get(apiUrl).then(showDescription);
-  axios.get(apiUrl).then(showHumidity);
-  axios.get(apiUrl).then(showWind);
+  axios.get(apiUrl).then(showDetails);
   axios.get(apiUrl).then(showCityName);
 }
 let useCurrentLocationButton = document.querySelector("button");
