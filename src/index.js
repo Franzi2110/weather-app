@@ -51,6 +51,11 @@ function showDetails(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+  let showHint = `${response.data.weather[0].icon}`;
+if (showHint === "09d" || "10d") 
+{document.querySelector("#hint")="Don't forget your umbrella!"}
+else {if (showHint === "01d") {document.querySelector("#hint")="Don't forget your sunglasses!"}
+else {document.querySelector("#hint")=""}};
 }
 function showCityName(response) {
   let cityName = document.querySelector("#city-name");
@@ -72,3 +77,4 @@ function showDetailsCurrentPosition(position) {
 }
 let useCurrentLocationButton = document.querySelector("button");
 useCurrentLocationButton.addEventListener("click", currentDetails);
+
