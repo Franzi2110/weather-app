@@ -46,6 +46,11 @@ function showDetails(response) {
   wind.innerHTML = `Wind speed: ${response.data.wind.speed} km/h`;
   let currentDate = document.querySelector("#current-date");
   currentDate.innerHTML = formatDate(response.data.dt * 1000);
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 function showCityName(response) {
   let cityName = document.querySelector("#city-name");
