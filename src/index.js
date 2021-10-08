@@ -18,6 +18,7 @@ function formatDate(timestamp) {
     "Saturday",
   ];
   let day = days[today.getDay()];
+  return `${day}, ${hour}:${minutes}`;
 }
 
 let citySearch = document.querySelector("#weather-search");
@@ -43,7 +44,7 @@ function showDetails(response) {
   let wind = document.querySelector("#wind");
   wind.innerHTML = `Wind speed: ${response.data.wind.speed} km/h`;
   let currentDate = document.querySelector("#current-date");
-  currentDate.innerHTML = formatDate(`${day}, ${hour}:${minutes}`);
+  currentDate.innerHTML = formatDate(response.data.dt * 1000);
 }
 function showCityName(response) {
   let cityName = document.querySelector("#city-name");
