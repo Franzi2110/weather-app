@@ -52,7 +52,7 @@ function showDetails(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   let showHint = response.data.weather[0].icon;
-  if (showHint === "09d" || "10d") {
+  if (showHint === "09d" || showHint === "10d") {
     document.querySelector("#hint").innerHTML = "Don't forget your umbrella!";
   } else {
     if (showHint === "01d") {
