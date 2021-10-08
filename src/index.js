@@ -17,8 +17,9 @@ function formatDate(timestamp) {
     "Friday",
     "Saturday",
   ];
+  let year = today.getFullYear();
   let day = days[today.getDay()];
-  return `${day}, ${hour}:${minutes}`;
+  return `${day}, ${hour}:${minutes}, ${year}`;
 }
 
 let citySearch = document.querySelector("#weather-search");
