@@ -1,5 +1,5 @@
 function formatDate(timestamp) {
-  let today = new Date(timestamp * 1000);
+  let today = new Date(timestamp);
   let hour = today.getHours();
   if (hour < 10) {
     hour = `0${hour}`;
