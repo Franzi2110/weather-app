@@ -28,13 +28,11 @@ ul {
 .temperature-conversion .active {
   color: black;
   text-decoration: none;
-  }
-
 }
-.temperature-conversion .active:hover
- {
-    cursor: default;
-  }
+
+.temperature-conversion .active:hover {
+  cursor: default;
+}
 .weather-app {
   margin: 30px auto;
   padding: 20px;
