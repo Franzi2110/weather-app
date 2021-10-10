@@ -90,6 +90,7 @@ function changeToCelsius(event) {
   let temperature = document.querySelector("#actualDegree");
   temperature.innerHTML = Math.round(celsiusTemperature);
   fahrenheitLink.classList.remove("active");
+  celsiusLink.classList.add("active");
 }
 
 function changeToFahrenheit(event) {
