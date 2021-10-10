@@ -24,6 +24,9 @@ ul {
   text-align: center;
   color: black;
 }
+#celsius, #fahrenheit {
+  text-decoration: none;
+}
 .temperature-conversion .active {
   color: black;
   cursor: default;
