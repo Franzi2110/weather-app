@@ -28,12 +28,11 @@ ul {
 }
 #celsius,
 #fahrenheit {
-  color: blue;
   transition: all 200ms ease-in-out;
 }
 #celsius:hover,
 #fahrenheit:hover {
-  text-decoration: underline;
+  text-decoration: none;
   color: rgb(3, 3, 88);
   cursor: default;
 }
