@@ -26,12 +26,13 @@ ul {
   text-align: center;
   color: black;
 }
-#celsius,
-#fahrenheit {
-  transition: all 200ms ease-in-out;
+.temperature-conversion .active {
+  color: black;
 }
-#celsius:hover,
-#fahrenheit:hover {
+
+}
+.temperature-conversion .active:hover
+ {
   text-decoration: none;
   color: rgb(3, 3, 88);
   cursor: default;
