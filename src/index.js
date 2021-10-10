@@ -36,7 +36,7 @@ function searchCityAndTemperature(event) {
   axios.get(apiUrl).then(showDetails);
 }
 function showDetails(response) {
-  let celsiusTemperature = response.data.main.temp;
+  celsiusTemperature = response.data.main.temp;
   let temperature = document.querySelector("#actualDegree");
   temperature.innerHTML = Math.round(celsiusTemperature);
   let description = document.querySelector("#description");
