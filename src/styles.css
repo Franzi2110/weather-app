@@ -11,9 +11,7 @@ ul {
   font-size: 24px;
   font-weight: bold;
 }
-#degreeSwitch {
-  font-size: 14px;
-}
+
 #actualDegree {
   font-size: 20px;
   font-weight: bold;
@@ -28,6 +26,7 @@ ul {
 }
 .temperature-conversion .active {
   color: black;
+  text-decoration: none;
 }
 
 }
