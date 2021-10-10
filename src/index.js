@@ -54,11 +54,12 @@ function showDetails(response) {
   );
   let showHint = response.data.weather[0].icon;
   if (showHint === "09d" || showHint === "10d") {
-    document.querySelector("#hint").innerHTML = "Don't forget your umbrella!";
+    document.querySelector("#hint").innerHTML =
+      "Don't forget your umbrella! ☔";
   } else {
     if (showHint === "01d") {
       document.querySelector("#hint").innerHTML =
-        "Don't forget your sunglasses!";
+        "Don't forget your sunglasses! 🕶";
     } else {
       document.querySelector("#hint").innerHTML = "";
     }
