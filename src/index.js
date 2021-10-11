@@ -111,4 +111,4 @@ fahrenheitLink.addEventListener("click", changeToFahrenheit);
 
 let celsiusTemperature = null;
 
-citySearch("Munich");
+searchCityAndTemperature("Munich");
