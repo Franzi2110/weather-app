@@ -110,3 +110,5 @@ let fahrenheitLink = document.querySelector("#fahrenheit");
 fahrenheitLink.addEventListener("click", changeToFahrenheit);
 
 let celsiusTemperature = null;
+
+citySearch("Munich");
