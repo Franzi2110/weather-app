@@ -25,12 +25,12 @@ ul {
   color: black;
 }
 
-.active {
+.temperature-conversion .active {
   color: black;
   text-decoration: none;
 }
 
-.active:hover {
+.temperature-conversion .active:hover {
   cursor: default;
 }
 .weather-app {
