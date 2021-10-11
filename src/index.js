@@ -17,16 +17,14 @@ function formatDate(timestamp) {
     "Friday",
     "Saturday",
   ];
-  let year = today.getFullYear();
   let day = days[today.getDay()];
-  return `${day}, ${hour}:${minutes}, ${year}`;
+  return `${day}, ${hour}:${minutes}`;
 }
 
 let citySearch = document.querySelector("#weather-search");
 citySearch.addEventListener("submit", searchCityAndTemperature);
 
-function searchCityAndTemperature(event) {
-  event.preventDefault();
+function searchCityAndTemperature(city) {
   let currentCity = document.querySelector("#current-city");
   let shownCity = document.querySelector("#city-name");
   shownCity.innerHTML = currentCity.value;
