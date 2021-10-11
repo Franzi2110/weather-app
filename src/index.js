@@ -45,7 +45,9 @@ function showDetails(response) {
   let wind = document.querySelector("#wind");
   wind.innerHTML = `Wind speed: ${response.data.wind.speed} km/h`;
   let currentDate = document.querySelector("#current-date");
-  currentDate.innerHTML = formatDate(response.data.dt * 1000);
+  currentDate.innerHTML = `Last updated: ${formatDate(
+    response.data.dt * 1000
+  )}`;
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute(
     "src",
