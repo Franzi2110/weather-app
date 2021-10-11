@@ -25,7 +25,7 @@ ul {
   color: black;
 }
 
-.temperature-conversion a .active {
+.temperature-conversion a {
   color: blue;
   text-decoration: none;
 }
