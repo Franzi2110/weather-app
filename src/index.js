@@ -24,7 +24,8 @@ function formatDate(timestamp) {
 let citySearch = document.querySelector("#weather-search");
 citySearch.addEventListener("submit", searchCityAndTemperature);
 
-function searchCityAndTemperature(city) {
+function searchCityAndTemperature(event) {
+  event.preventDefault();
   let currentCity = document.querySelector("#current-city");
   let shownCity = document.querySelector("#city-name");
   shownCity.innerHTML = currentCity.value;
@@ -108,5 +109,3 @@ let fahrenheitLink = document.querySelector("#fahrenheit");
 fahrenheitLink.addEventListener("click", changeToFahrenheit);
 
 let celsiusTemperature = null;
-
-searchCityAndTemperature("Munich");
