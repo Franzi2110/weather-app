@@ -18,6 +18,7 @@ ul {
 }
 #description {
   text-transform: capitalize;
+  font-weight: bolder;
   margin-bottom: 20px;
 }
 #github-link {

@@ -86,7 +86,7 @@ function showDetails(response) {
   let temperature = document.querySelector("#actualDegree");
   temperature.innerHTML = Math.round(celsiusTemperature);
   let description = document.querySelector("#description");
-  description.innerHTML = `Description: ${response.data.weather[0].description}`;
+  description.innerHTML = response.data.weather[0].description;
   let cityHumidity = document.querySelector("#current-humidity");
   cityHumidity.innerHTML = `Humidity: ${response.data.main.humidity}%`;
   let wind = document.querySelector("#wind");
