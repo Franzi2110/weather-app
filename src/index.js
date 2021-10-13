@@ -95,7 +95,7 @@ function showDetails(response) {
       document.querySelector("#hint").innerHTML = "";
     }
   }
-  getForecast(response.data.coords);
+  getForecast(response.data.coord);
 }
 function showCityName(response) {
   let cityName = document.querySelector("#city-name");
