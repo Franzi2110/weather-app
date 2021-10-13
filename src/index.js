@@ -21,6 +21,25 @@ function formatDate(timestamp) {
   return `${day}, ${hour}:${minutes}`;
 }
 
+function showForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHtml = `<div class="row justify-content-between">`;
+  forecastHtml =
+    forecastHtml +
+    `
+            <div class="col-2">
+              <div class="weather-forecast-date">Day 1</div>
+              <p>☀</p>
+              <div class="weather-forecast-temperatures">
+                <span class="weather-forecast-temperature-max">14°</span>
+                <span class="weather-forecast-temperature-min">10°</span>
+              </div>
+            </div>`;
+
+  forecastHtml = `</div>`;
+  forecastElement.innerHTML = forecastHtml;
+}
+
 let citySearch = document.querySelector("#weather-search");
 citySearch.addEventListener("submit", searchCityAndTemperature);
 
