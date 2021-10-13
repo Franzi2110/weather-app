@@ -88,8 +88,6 @@ function searchCityAndTemperature(event) {
 let citySearch = document.querySelector("#weather-search");
 citySearch.addEventListener("submit", searchCityAndTemperature);
 
-searchForCity("München");
-
 function showDetails(response) {
   celsiusTemperature = response.data.main.temp;
   let temperature = document.querySelector("#actualDegree");
@@ -168,3 +166,5 @@ let fahrenheitLink = document.querySelector("#fahrenheit");
 fahrenheitLink.addEventListener("click", changeToFahrenheit);
 
 let celsiusTemperature = null;
+
+searchForCity("München");
