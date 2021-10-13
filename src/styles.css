@@ -35,8 +35,12 @@ ul {
   font-size: 12px;
 }
 #hint {
+  margin-top: 50px;
   font-size: 22px;
   font-style: italic;
+}
+#icon {
+  width: 80;
 }
 .forecast-icon {
   text-align: center;

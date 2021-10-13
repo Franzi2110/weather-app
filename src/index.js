@@ -68,14 +68,12 @@ function getForecast(coordinates) {
   axios.get(apiUrl).then(showForecast);
 }
 
-let citySearch = document.querySelector("#weather-search");
-citySearch.addEventListener("submit", searchCityAndTemperature);
-
 function searchForCity(city) {
   let units = "metric";
   let apiKey = "b400ae3b711a616262d18b0ca2cbe78f";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(showDetails);
+  searchCityAndTemperature();
 }
 function searchCityAndTemperature(event) {
   event.preventDefault();
@@ -83,6 +81,10 @@ function searchCityAndTemperature(event) {
   let shownCity = document.querySelector("#city-name");
   shownCity.innerHTML = searchForCity(currentCity.value);
 }
+let citySearch = document.querySelector("#weather-search");
+citySearch.addEventListener("submit", searchCityAndTemperature);
+
+searchForCity("München");
 
 function showDetails(response) {
   celsiusTemperature = response.data.main.temp;
@@ -162,5 +164,3 @@ let fahrenheitLink = document.querySelector("#fahrenheit");
 fahrenheitLink.addEventListener("click", changeToFahrenheit);
 
 let celsiusTemperature = null;
-
-searchForCity("München");
