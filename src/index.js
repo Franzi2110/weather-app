@@ -24,8 +24,8 @@ function formatDate(timestamp) {
 function showForecast() {
   let forecastElement = document.querySelector("#forecast");
   let days = ["Day 1", "Day 2", "Day 3", "Day 4"];
+  let forecastHtml = `<div class="row justify-content-between">`;
   days.forEach(function (day) {
-    let forecastHtml = `<div class="row justify-content-between">`;
     forecastHtml =
       forecastHtml +
       `
@@ -44,7 +44,6 @@ function showForecast() {
   console.log(forecastHtml);
 }
 showForecast();
-console.log(showForecast);
 
 let citySearch = document.querySelector("#weather-search");
 citySearch.addEventListener("submit", searchCityAndTemperature);
