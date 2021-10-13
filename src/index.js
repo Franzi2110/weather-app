@@ -71,18 +71,19 @@ function getForecast(coordinates) {
 let citySearch = document.querySelector("#weather-search");
 citySearch.addEventListener("submit", searchCityAndTemperature);
 
-function searchCityAndTemperature(event) {
-  event.preventDefault();
-  let currentCity = document.querySelector("#current-city");
-  let shownCity = document.querySelector("#city-name");
-  shownCity.innerHTML = searchForCity(currentCity.value);
-}
 function searchForCity(city) {
   let units = "metric";
   let apiKey = "b400ae3b711a616262d18b0ca2cbe78f";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(showDetails);
 }
+function searchCityAndTemperature(event) {
+  event.preventDefault();
+  let currentCity = document.querySelector("#current-city");
+  let shownCity = document.querySelector("#city-name");
+  shownCity.innerHTML = searchForCity(currentCity.value);
+}
+
 function showDetails(response) {
   celsiusTemperature = response.data.main.temp;
   let temperature = document.querySelector("#actualDegree");
