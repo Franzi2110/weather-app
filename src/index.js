@@ -38,6 +38,7 @@ function showForecast() {
 
   forecastHtml = `</div>`;
   forecastElement.innerHTML = forecastHtml;
+  console.log(forecastHtml);
 }
 showForecast();
 
