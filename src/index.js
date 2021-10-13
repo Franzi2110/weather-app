@@ -44,6 +44,7 @@ function showForecast() {
   console.log(forecastHtml);
 }
 showForecast();
+console.log(showForecast);
 
 let citySearch = document.querySelector("#weather-search");
 citySearch.addEventListener("submit", searchCityAndTemperature);
