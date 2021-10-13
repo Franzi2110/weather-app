@@ -13,13 +13,18 @@ ul {
 }
 
 #actualDegree {
-  font-size: 20px;
+  font-size: 24px;
   font-weight: bold;
 }
 #description {
   text-transform: capitalize;
   font-weight: bolder;
+  margin-top: 50px;
   margin-bottom: 20px;
+}
+#humidity,
+#wind {
+  font-size: 16px;
 }
 #github-link {
   display: block;
@@ -28,6 +33,10 @@ ul {
 }
 #current-date {
   font-size: 12px;
+}
+#hint {
+  font-size: 22px;
+  font-style: italic;
 }
 .forecast-icon {
   text-align: center;
