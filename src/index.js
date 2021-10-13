@@ -23,20 +23,23 @@ function formatDate(timestamp) {
 
 function showForecast() {
   let forecastElement = document.querySelector("#forecast");
-  let forecastHtml = `<div class="row justify-content-between">`;
-  forecastHtml =
-    forecastHtml +
-    `
+  let days = ["Day 1", "Day 2", "Day 3", "Day 4"];
+  days.forEach(function (day) {
+    let forecastHtml = `<div class="row justify-content-between">`;
+    forecastHtml =
+      forecastHtml +
+      `
             <div class="col-2">
-              <div class="weather-forecast-date">Day 1</div>
+              <div class="weather-forecast-date">${day}</div>
               <p>☀</p>
               <div class="weather-forecast-temperatures">
                 <span class="weather-forecast-temperature-max">14°</span>
                 <span class="weather-forecast-temperature-min">10°</span>
               </div>
             </div>`;
+  });
 
-  forecastHtml = `</div>`;
+  forecastHtml = forecastHtml + `</div>`;
   forecastElement.innerHTML = forecastHtml;
   console.log(forecastHtml);
 }
