@@ -73,16 +73,12 @@ function searchForCity(city) {
   let apiKey = "b400ae3b711a616262d18b0ca2cbe78f";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(showDetails);
-  let currentCity = document.querySelector("#current-city");
-  let shownCity = document.querySelector("#city-name");
-  shownCity.innerHTML = searchForCity(currentCity.value);
 }
 
 function searchCityAndTemperature(event) {
   event.preventDefault();
   let currentCity = document.querySelector("#current-city");
-  let shownCity = document.querySelector("#city-name");
-  shownCity.innerHTML = searchForCity(currentCity.value);
+  searchForCity(currentCity.value);
 }
 
 let citySearch = document.querySelector("#weather-search");
@@ -90,6 +86,8 @@ citySearch.addEventListener("submit", searchCityAndTemperature);
 
 function showDetails(response) {
   celsiusTemperature = response.data.main.temp;
+  let cityName = document.querySelector("#city-name");
+  cityName.innerHTML = response.data.name;
   let temperature = document.querySelector("#actualDegree");
   temperature.innerHTML = Math.round(celsiusTemperature);
   let description = document.querySelector("#description");
@@ -121,10 +119,7 @@ function showDetails(response) {
   }
   getForecast(response.data.coord);
 }
-function showCityName(response) {
-  let cityName = document.querySelector("#city-name");
-  cityName.innerHTML = response.data.name;
-}
+
 function currentDetails(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(showDetailsCurrentPosition);
@@ -137,7 +132,6 @@ function showDetailsCurrentPosition(position) {
   let apiKey = "b400ae3b711a616262d18b0ca2cbe78f";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(showDetails);
-  axios.get(apiUrl).then(showCityName);
 }
 let useCurrentLocationButton = document.querySelector("button");
 useCurrentLocationButton.addEventListener("click", currentDetails);
