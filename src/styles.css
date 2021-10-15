@@ -45,6 +45,9 @@ ul {
 .forecast-icon {
   text-align: center;
 }
+.weather-forecast-date {
+  text-align: center;
+}
 .weather-forecast-temperature-max {
   font-size: 14px;
   text-align: center;
